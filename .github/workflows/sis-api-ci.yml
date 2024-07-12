@@ -1,0 +1,42 @@
+name: Shop Inventory System API CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_PASSWORD: 123456
+          POSTGRES_USER: admin
+          POSTGRES_DB: sis-test-db
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 22
+        uses: actions/setup-java@v3
+        with:
+          java-version: '22'
+          distribution: 'adopt'
+          cache: maven
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+        env:
+          DB_URL: jdbc:postgresql://localhost:5432/sis-test-db
+          DB_USERNAME: admin
+          DB_PASSWORD: 123456
