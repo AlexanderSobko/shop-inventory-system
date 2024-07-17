@@ -1,0 +1,21 @@
+#Firstname validation
+{"lastName":"LastName","email":"mail1@mail.ru","phone":"+79688331317","city":"SomeCity"}|{"error":"Firstname can't be blank!"}
+{"firstName":"F","lastName":"LastName","email":"mail2@mail.ru","phone":"+79688331327","city":"SomeCity"}|{"error":"Firstname must be between 2 and 20 characters!"}
+{"firstName":"FirstNameeeeeeeeeeeee","lastName":"LastName","email":"mail3@mail.ru","phone":"+79688331337","city":"SomeCity"}|{"error":"Firstname must be between 2 and 20 characters!"}
+#LastName validation
+{"firstName":"FirstName","email":"mail4@mail.ru","phone":"+79688331347","city":"SomeCity"}|{"error":"Lastname can't be blank!"}
+{"firstName":"FirstName","lastName":"L","email":"mail5@mail.ru","phone":"+79688331357","city":"SomeCity"}|{"error":"Lastname must be between 2 and 20 characters!"}
+{"firstName":"FirstName","lastName":"LastNameeeeeeeeeeeeee","email":"mail6@mail.ru","phone":"+79688331367","city":"SomeCity"}|{"error":"Lastname must be between 2 and 20 characters!"}
+#Email validation
+{"firstName":"FirstName","lastName":"LastName","phone":"+79688331317","city":"SomeCity"}|{"error":"Email can't be blank!"}
+{"firstName":"FirstName","lastName":"LastName","email":"@mail.ru","phone":"+79688331327","city":"SomeCity"}|{"error":"must be a well-formed email address"}
+{"firstName":"FirstName","lastName":"LastName","email":"mail1@mail.","phone":"+79688331317","city":"SomeCity"}|{"error":"must be a well-formed email address"}
+#Phone validation
+{"firstName":"FirstName","lastName":"LastName","email":"mail4@mail.ru","city":"SomeCity"}|{"error":"The phone number can't be blank!"}
+{"firstName":"FirstName","lastName":"LastName","email":"mail4@mail.ru","phone":"79688331347","city":"SomeCity"}|{"error":"The phone number must be valid!"}
+{"firstName":"FirstName","lastName":"LastName","email":"mail5@mail.ru","phone":"+7968833135","city":"SomeCity"}|{"error":"The phone number must be valid!"}
+{"firstName":"FirstName","lastName":"LastName","email":"mail6@mail.ru","phone":"+7968833136777","city":"SomeCity"}|{"error":"The phone number must be valid!"}
+#City validation
+{"firstName":"FirstName","lastName":"LastName","email":"mail6@mail.ru","phone":"+79688331367"}|{"error":"City can't be blank!"}
+{"firstName":"FirstName","lastName":"LastName","email":"mail6@mail.ru","phone":"+79688331367","city":"C"}|{"error":"City must be between 2 and 50 characters!"}
+{"firstName":"FirstName","lastName":"LastName","email":"mail6@mail.ru","phone":"+79688331367","city":"SomeCityyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"}|{"error":"City must be between 2 and 50 characters!"}

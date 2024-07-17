@@ -1,0 +1,13 @@
+#Test Filtering With One Arg
+{"id":"1","firstName":"","lastName":"","email":"","city":"","phone":"","from":"0","size":"10"}|1
+{"id":"","firstName":"FirstName1","lastName":"","email":"","city":"","phone":"","from":"0","size":"10"}|2
+{"id":"","firstName":"","lastName":"LastName4","email":"","city":"","phone":"","from":"0","size":"10"}|3
+{"id":"","firstName":"","lastName":"","email":"someeEmai5l@example.com","city":"","phone":"","from":"0","size":"10"}|1
+{"id":"","firstName":"","lastName":"","email":"","city":"New York","phone":"","from":"0","size":"10"}|4
+{"id":"","firstName":"","lastName":"","email":"","city":"","phone":"12345672890","from":"0","size":"10"}|1
+{"id":"","firstName":"","lastName":"","email":"","city":"","phone":"","from":"0","size":"10"}|0
+#Test From And Size
+{"id":"","firstName":"","lastName":"LastName4","email":"","city":"","phone":"","from":"1","size":"10"}|2
+{"id":"","firstName":"","lastName":"LastName4","email":"","city":"","phone":"","from":"0","size":"2"}|2
+#Test Filtering With Multiple Arg
+{"id":"","firstName":"FirstName1","lastName":"LastName4","email":"","city":"","phone":"","from":"0","size":"10"}|5

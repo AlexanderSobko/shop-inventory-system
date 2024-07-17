@@ -1,0 +1,2 @@
+{"firstName":"FirstName","lastName":"LastName","email":"mail1@mail.ru","phone":"+79688331387","city":"SomeCity"}|{"id":1,"firstName":"FirstName","lastName":"LastName","email":"mail1@mail.ru","city":"SomeCity","phone":"+79688331387"}
+{"firstName":"FirstName","lastName":"LastName","email":"mail2@mail.ru","phone":"+79688331337","city":"SomeCity"}|{"id":1,"firstName":"FirstName","lastName":"LastName","email":"mail2@mail.ru","city":"SomeCity","phone":"+79688331337"}
